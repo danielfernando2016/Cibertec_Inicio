@@ -13,7 +13,8 @@ namespace WebDeveloper.DataAccess
     {
         public WebContextDb() : base("name=WebDeveloperConnectionString")
         {
-
+            //En este constructor llamaremos al metodo que rellena data
+            Database.SetInitializer(new WebDeveloperInitializer());
         }
         public DbSet<Client> Clients { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
