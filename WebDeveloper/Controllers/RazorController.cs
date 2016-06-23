@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebDeveloper.DataAccess;
 using WebDeveloper.Model;
 
 namespace WebDeveloper.Controllers
@@ -20,6 +21,12 @@ namespace WebDeveloper.Controllers
             }; 
 
             return View(list);
+        }
+
+        public ActionResult Product()
+        {
+            var productData = new ProductData();
+            return View(productData.GetFakeProducts());
         }
     }
 }

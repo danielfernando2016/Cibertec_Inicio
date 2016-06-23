@@ -7,24 +7,24 @@ namespace WebDeveloper.Model
     public class Product
     {
         public int ID { get; set; }
-        [Display(Name = "Product Name")]
+        [Display(Name = "Description")]
         [Required(ErrorMessage = "This field is required")]
-        public string ProductName { get; set; }
+        public string Description { get; set; }
 
-        
-        
+
+
         [DataType(DataType.Date)]
-        [Display(Name = "Create Date")]        
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]        
+        [Display(Name = "Create Date")]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime? CreateDate { get; set; }
 
-        [Display(Name = "Stock")]
-        [Required(ErrorMessage = "The field is required")]
-        public int ProductStock { get; set; }
+        //[Display(Name = "Stock")]
+        //[Required(ErrorMessage = "The field is required")]
+        //public int ProductStock { get; set; }
 
-        [Display(Name = "Purchase Price")]
+        [Display(Name = "Price")]
         [Required(ErrorMessage = "The field is required")]
-        public double PurchasePrice { get; set; }
+        public double Price { get; set; }
 
     }
 }
