@@ -13,11 +13,32 @@ namespace WebDeveloper
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-                name: "Razor",
-                url: "Razor/{id}",
-                defaults: new { controller = "Razor", action = "Product", id = UrlParameter.Optional }
-            );
+            ////Razor
+            //routes.MapRoute(
+            //    name: "RazorId",
+            //    url: "Razor/{id}",
+            //    defaults: new
+            //    {
+            //        controller = "Razor",
+            //        action = "EntryId",
+
+            //    }
+            //);
+
+            ////Razor
+            //routes.MapRoute(
+            //    name: "RazorDate",
+            //    url: "Razor/{date}",
+            //    defaults: new
+            //    {
+            //        controller = "Razor",
+            //        action = "EntryDate",
+
+            //    }
+            //);
+
+
+            routes.MapMvcAttributeRoutes();
 
 
             routes.MapRoute(
