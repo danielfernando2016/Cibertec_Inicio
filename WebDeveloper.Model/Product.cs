@@ -1,13 +1,15 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using WebDeveloper.Resources;
 
 namespace WebDeveloper.Model
 {
     public class Product
     {
         public int ID { get; set; }
-        [Display(Name = "Description")]
+        
+        [Display(Name = "Description_Name", ResourceType = typeof(Resource))]
         [Required(ErrorMessage = "This field is required")]
         public string Description { get; set; }
 

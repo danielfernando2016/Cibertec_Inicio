@@ -30,6 +30,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LightInject, Version=3.0.1.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightInject.3.0.1.7\lib\net45\LightInject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LightInject.Mvc, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightInject.Mvc.1.0.0.4\lib\net45\LightInject.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LightInject.Web, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightInject.Web.1.0.0.4\lib\net45\LightInject.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -44,6 +56,15 @@
     <Compile Include="Client.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebDeveloper.Resources\WebDeveloper.Resources.csproj">
+      <Project>{0432fd49-f25c-42e4-a77a-fe17ac66016b}</Project>
+      <Name>WebDeveloper.Resources</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
